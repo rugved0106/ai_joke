@@ -1,0 +1,39 @@
+body {
+    font-family: Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Classy purple-blue */
+    overflow: hidden;
+  }
+
+  /* Animated bubbles */
+  .bubble {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: floatUp 20s infinite ease-in;
+  }
+
+  .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-delay: 0s; }
+  .bubble:nth-child(2) { width: 60px; height: 60px; left: 30%; animation-delay: 2s; }
+  .bubble:nth-child(3) { width: 20px; height: 20px; left: 50%; animation-delay: 4s; }
+  .bubble:nth-child(4) { width: 80px; height: 80px; left: 70%; animation-delay: 1s; }
+  .bubble:nth-child(5) { width: 30px; height: 30px; left: 85%; animation-delay: 3s; }
+
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 0.6; }
+    100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+  }
+
+  .joke-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .joke-text {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
